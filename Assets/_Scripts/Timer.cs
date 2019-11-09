@@ -26,6 +26,11 @@ public class Timer : MonoBehaviour
 
         Debug.Log(bar.fillAmount);
         //Debug.Log(shotClock);
+
+        if (bar.fillAmount <= 0.0f)
+        {
+            Debug.Log("Game Over");
+        }
     }
 
 }
