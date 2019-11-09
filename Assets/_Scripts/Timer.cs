@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
         //bar.fillAmount -= (shotClockTime / 100);
         bar.fillAmount -= Time.deltaTime / shotClockTime;
 
-        Debug.Log(bar.fillAmount);
+        //Debug.Log(bar.fillAmount);
         //Debug.Log(shotClock);
 
         if (bar.fillAmount <= 0.0f)
