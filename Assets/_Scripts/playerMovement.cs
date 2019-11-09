@@ -104,4 +104,15 @@ public class playerMovement : MonoBehaviour
         //  transform.forward = move;
 
     }
+
+
+    void OnControllerColliderHit(ControllerColliderHit collision)
+    {
+        if (collision.gameObject.tag == "Gift")
+        {
+            Debug.Log("touched gift");
+            collision.gameObject.transform.SetParent(gameObject.transform);
+            //collision.gameObject.transform.position= new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y,collision.gameObject.transform.position.z);
+        }
+    }
 }
