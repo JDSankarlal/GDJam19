@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public float speed = 10;
-    public float acceleration = 2.5f;
+    public float acceleration = 5f;
     public int MaxSpeed = 25;
     Vector3 rotation = new Vector3();
     private CharacterController cc1;
@@ -28,8 +28,8 @@ public class playerMovement : MonoBehaviour
         {
             if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
             {
-                if (speed >= MaxSpeed)
                 speed += Time.deltaTime * acceleration;
+                if (speed >= MaxSpeed)
                     speed = MaxSpeed;
             }
 
@@ -102,7 +102,7 @@ public class playerMovement : MonoBehaviour
     }
 
 
-    void OnControllerColliderHit(ControllerColliderHit collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Gift")
         {
