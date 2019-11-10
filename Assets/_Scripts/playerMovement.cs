@@ -77,13 +77,5 @@ public class playerMovement : MonoBehaviour
             GameObject.Find("Cube").transform.position =  new Vector3(0.0f, 0.5800052f, 0.0f);
         }
     }
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Gift")
-        {
-            Debug.Log("touched gift");
-            collision.gameObject.transform.SetParent(gameObject.transform);
-            //collision.gameObject.transform.position= new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y,collision.gameObject.transform.position.z);
-        }
-    }
+    
 }
