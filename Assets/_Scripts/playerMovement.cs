@@ -26,19 +26,19 @@ public class playerMovement : MonoBehaviour
     {
         if (this.gameObject.name == "Player1")
         {
-            if (Input.GetButton("Horizontal1") || Input.GetButton("Vertical1"))
+            if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
             {
                 if (speed >= MaxSpeed)
                 speed += Time.deltaTime * acceleration;
                     speed = MaxSpeed;
             }
 
-            if (Input.GetButtonUp("Horizontal1") || Input.GetButtonUp("Vertical1"))
+            if (Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical"))
             {
                 speed = 10;
             }
 
-            Vector3 move = new Vector3(Input.GetAxis("Horizontal1"), 0, Input.GetAxis("Vertical1"));
+            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             cc1.Move(move * Time.deltaTime * speed);
         }
 
