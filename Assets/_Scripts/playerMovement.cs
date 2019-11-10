@@ -12,6 +12,8 @@ public class playerMovement : MonoBehaviour
     private CharacterController cc2;
     private CharacterController cc3;
     private CharacterController cc4;
+
+    public bool resetTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,8 @@ public class playerMovement : MonoBehaviour
         cc2 = GameObject.Find("Player2").GetComponent<CharacterController>();
         cc3 = GameObject.Find("Player3").GetComponent<CharacterController>();
         cc4 = GameObject.Find("Player4").GetComponent<CharacterController>();
+
+        resetTime = false;
     }
 
     // Update is called once per frame
@@ -112,6 +116,7 @@ public class playerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Gift")
         {
+            resetTime = true;
             Debug.Log("touched gift");
             collision.gameObject.transform.SetParent(gameObject.transform);
             //collision.gameObject.transform.position= new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y,collision.gameObject.transform.position.z);

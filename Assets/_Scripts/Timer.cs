@@ -7,6 +7,8 @@ public class Timer : MonoBehaviour
 {
     public Image bar;
     public float shotClockTime;
+
+    public playerMovement pM;
     //private float shotClock;
 
     // Start is called before the first frame update
@@ -24,13 +26,16 @@ public class Timer : MonoBehaviour
         //bar.fillAmount -= (shotClockTime / 100);
         bar.fillAmount -= Time.deltaTime / shotClockTime;
 
-        //Debug.Log(bar.fillAmount);
-        //Debug.Log(shotClock);
+        if (pM.resetTime)
+        {
+            Debug.Log("hi");
+            bar.fillAmount = 1;
+            pM.resetTime = false;
+        }
 
         if (bar.fillAmount <= 0.0f)
         {
             //Debug.Log("Game Over");
         }
     }
-
 }
