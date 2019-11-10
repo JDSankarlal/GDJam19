@@ -50,19 +50,20 @@ public class playerMovement : MonoBehaviour
     void movePlayer(string num)
     {
         if (Input.GetButton("Horizontal"+num) || Input.GetButton("Vertical"+num))
-            {
-              speed += Time.deltaTime * acceleration;
-                if (speed >= MaxSpeed)
-                    speed = MaxSpeed;
-            }
+        {
+          speed += Time.deltaTime * acceleration;
+            if (speed >= MaxSpeed)
+                speed = MaxSpeed;
+        }
 
-            if (Input.GetButtonUp("Horizontal"+num) || Input.GetButtonUp("Vertical"+num))
-            {
-                speed = 10;
-            }
+        if (Input.GetButtonUp("Horizontal"+num) || Input.GetButtonUp("Vertical"+num))
+        {
+            speed = 10;
+        }
 
-            Vector3 move = new Vector3(Input.GetAxis("Horizontal"+num), 0, Input.GetAxis("Vertical"+num));
-            cc.Move(move * Time.deltaTime * speed);
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"+num), 0, Input.GetAxis("Vertical"+num));
+        transform.rotation = Quaternion.LookRotation(move);
+        cc.Move(move * Time.deltaTime * speed);
     }
 
     void LateUpdate()
