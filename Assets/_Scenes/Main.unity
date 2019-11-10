@@ -1041,6 +1041,7 @@ GameObject:
   - component: {fileID: 1736958087}
   - component: {fileID: 1736958086}
   - component: {fileID: 1736958091}
+  - component: {fileID: 1736958090}
   m_Layer: 0
   m_Name: Gift
   m_TagString: Gift
@@ -1121,6 +1122,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736958090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736958085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70effebe937130b44b9dbf9d58b7a0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1736958091
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1135,7 +1148,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &1867717429
 GameObject:
