@@ -12,7 +12,6 @@ public class Gift : MonoBehaviour
     void Start()
     {
         GiftRb = gameObject.transform.GetComponent<Rigidbody>();
-        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
@@ -36,13 +35,14 @@ public class Gift : MonoBehaviour
     {
         if (Input.GetButton("Throw" + num))
         {
+            GameObject.Find("Player" + num).GetComponentInChildren<ParticleSystem>().Stop();
+
             Debug.Log("Gift Throw Pressed");
 
             GiftRb.AddForce(gameObject.transform.parent.forward * 1000);
             gameObject.transform.parent = null; //Child moves out
             gameObject.GetComponent<BoxCollider>().enabled = true;
 
-            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ParticleSystem>().Stop();
         }
     }
 
