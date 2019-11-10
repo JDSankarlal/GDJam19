@@ -15,7 +15,7 @@ public class PlayerGiftBehaviour : MonoBehaviour
     {
         if (gameObject.transform.childCount > 0) //If the Player has a child attached to it
         {
-            if (gameObject.transform.GetChild(0)) //Get the first child (this should only ever be the Gift?)
+            if (gameObject.transform.Find("Gift")) //Get the first child (this should only ever be the Gift?)
             {   
                 if (this.gameObject.name == "Player1")
                     ThrowGift(""); //No string because Player1 uses "Horizontal" input
@@ -35,6 +35,10 @@ public class PlayerGiftBehaviour : MonoBehaviour
         if (Input.GetButton("Throw"+num))
         {
             Debug.Log("Gift Throw Pressed");
+
+           
+
+
         }
     }
 

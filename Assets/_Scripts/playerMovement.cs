@@ -72,9 +72,9 @@ public class playerMovement : MonoBehaviour
             gameObject.transform.position = new Vector3(gameObject.transform.position.x,.58f,gameObject.transform.position.z);
         }
 
-        if (GameObject.Find("Cube").transform.position.y < 0.5800052f)
+        if (GameObject.Find("Gift").transform.position.y < 0.5800052f)
         {
-            GameObject.Find("Cube").transform.position =  new Vector3(0.0f, 0.5800052f, 0.0f);
+            GameObject.Find("Gift").transform.position =  new Vector3(0.0f, 0.5800052f, 0.0f);
         }
     }
     
