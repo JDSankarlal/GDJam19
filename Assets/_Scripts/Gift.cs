@@ -35,7 +35,7 @@ public class Gift : MonoBehaviour
         {
             Debug.Log("Gift Throw Pressed");
 
-            GiftRb.AddForce(gameObject.transform.forward * 100);
+            GiftRb.AddForce(gameObject.transform.parent.forward * 1000);
             gameObject.transform.parent = null; //Child moves out
 
         }
@@ -48,7 +48,10 @@ public class Gift : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("touched gift");
+            GiftRb.velocity = Vector3.zero;
+            GiftRb.angularVelocity = Vector3.zero;  
             gameObject.transform.SetParent(collision.gameObject.transform);
+
             //collision.gameObject.transform.position= new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y,collision.gameObject.transform.position.z);
         }
     }
