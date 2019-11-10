@@ -8,12 +8,14 @@ public class Timer : MonoBehaviour
     public Image bar;
     public float shotClockTime;
     //private float shotClock;
+    public Gift gift;
 
     // Start is called before the first frame update
     void Start()
     {
         bar.GetComponent<Image>();
         //shotClock = shotClockTime;
+        gift.GetComponent<Gift>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,12 @@ public class Timer : MonoBehaviour
 
         //Debug.Log(bar.fillAmount);
         //Debug.Log(shotClock);
+
+        if(gift.resetTimer)
+        {
+            bar.fillAmount = 1;
+            gift.resetTimer = false;
+        }
 
         if (bar.fillAmount <= 0.0f)
         {

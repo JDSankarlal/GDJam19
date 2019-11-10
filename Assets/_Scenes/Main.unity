@@ -805,8 +805,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 5ce6401d01702414394a7d96719f7523, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -959,8 +957,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: cead203eafadfee49985aec39c558b16, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -1035,11 +1031,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: -6442168080968890049, guid: 37752cae3ae44254ebd027da6efefac9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 27b617b927cfdd74197effa34ade6635, type: 2}
     - target: {fileID: -4216859302048453862, guid: 37752cae3ae44254ebd027da6efefac9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1110,6 +1101,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.002
       objectReference: {fileID: 0}
+    - target: {fileID: -6442168080968890049, guid: 37752cae3ae44254ebd027da6efefac9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 27b617b927cfdd74197effa34ade6635, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37752cae3ae44254ebd027da6efefac9, type: 3}
 --- !u!1 &1373606126 stripped
@@ -1568,6 +1564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70effebe937130b44b9dbf9d58b7a0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetTimer: 0
 --- !u!54 &1736958091
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1709,6 +1706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 1042888068}
   shotClockTime: 10
+  gift: {fileID: 1736958090}
 --- !u!4 &1867717431
 Transform:
   m_ObjectHideFlags: 0

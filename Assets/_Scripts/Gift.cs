@@ -5,6 +5,7 @@ using UnityEngine;
 public class Gift : MonoBehaviour
 {
     Rigidbody GiftRb;
+    public bool resetTimer = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,7 @@ public class Gift : MonoBehaviour
 
             GiftRb.AddForce(gameObject.transform.parent.forward * 1000);
             gameObject.transform.parent = null; //Child moves out
+            gameObject.GetComponent<BoxCollider>().enabled = true;
 
         }
     }
@@ -47,10 +49,12 @@ public class Gift : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            resetTimer = true;
             Debug.Log("touched gift");
             GiftRb.velocity = Vector3.zero;
             GiftRb.angularVelocity = Vector3.zero;  
             gameObject.transform.SetParent(collision.gameObject.transform);
+            gameObject.GetComponent<BoxCollider>().enabled = false;
 
             //collision.gameObject.transform.position= new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y,collision.gameObject.transform.position.z);
         }
