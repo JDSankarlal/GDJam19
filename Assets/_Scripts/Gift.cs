@@ -15,17 +15,15 @@ public class Gift : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.parent) //If the gift has a parent
-        {
-            if (gameObject.transform.parent.tag=="Player") // And the parent is a Player
+          if (gameObject.transform.parent.tag=="Player") // And the parent is a Player
             {
-                if (this.gameObject.name == "Player1") //Check which player
+                if (this.gameObject.transform.parent.name == "Player1") //Check which player
                     ThrowGift(""); //No string because Player1 uses "Horizontal" input
-                if (this.gameObject.name == "Player2")
+                if (this.gameObject.transform.parent.name == "Player2")
                     ThrowGift("2");
-                if (this.gameObject.name == "Player3")
+                if (this.gameObject.transform.parent.name == "Player3")
                     ThrowGift("3");
-                if (this.gameObject.name == "Player4")
+                if (this.gameObject.transform.parent.name == "Player4")
                     ThrowGift("4");
             }
 
@@ -38,10 +36,9 @@ public class Gift : MonoBehaviour
                 Debug.Log("Gift Throw Pressed");
 
                 GiftRb.AddForce(100, 0, 0);
-
+                gameObject.transform.parent = null; //Child moves out
 
             }
         }
-    }
 }
 
