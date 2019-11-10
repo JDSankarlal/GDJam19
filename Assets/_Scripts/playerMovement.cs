@@ -5,8 +5,8 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public float speed = 10;
-    public float acceleration = 5f;
-    public int MaxSpeed = 25;
+    public float acceleration = 80f;
+    public int MaxSpeed = 35;
     Vector3 rotation = new Vector3();
     private CharacterController cc;
     // Start is called before the first frame update
