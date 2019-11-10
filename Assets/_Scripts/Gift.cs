@@ -20,7 +20,7 @@ public class Gift : MonoBehaviour
         if (gameObject.transform.parent.tag == "Player") // And the parent is a Player
         {
             if (this.gameObject.transform.parent.name == "Player1") //Check which player
-                ThrowGift(""); //No string because Player1 uses "Horizontal" input
+                ThrowGift("1"); //No string because Player1 uses "Horizontal" input
             if (this.gameObject.transform.parent.name == "Player2")
                 ThrowGift("2");
             if (this.gameObject.transform.parent.name == "Player3")
