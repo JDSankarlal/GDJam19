@@ -6,11 +6,13 @@ public class Gift : MonoBehaviour
 {
     Rigidbody GiftRb;
     public bool resetTimer = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         GiftRb = gameObject.transform.GetComponent<Rigidbody>();
-
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class Gift : MonoBehaviour
             gameObject.transform.parent = null; //Child moves out
             gameObject.GetComponent<BoxCollider>().enabled = true;
 
+            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ParticleSystem>().Stop();
         }
     }
 
@@ -50,6 +53,7 @@ public class Gift : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             resetTimer = true;
+            collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
             Debug.Log("touched gift");
             GiftRb.velocity = Vector3.zero;
             GiftRb.angularVelocity = Vector3.zero;  
