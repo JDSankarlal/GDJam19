@@ -5,11 +5,13 @@ using UnityEngine;
 public class Gift : MonoBehaviour
 {
     Rigidbody GiftRb;
+
+    public bool resetTimer;
     // Start is called before the first frame update
     void Start()
     {
         GiftRb = gameObject.transform.GetComponent<Rigidbody>();
-
+        resetTimer = false;
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class Gift : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            resetTimer = true;
             Debug.Log("touched gift");
             gameObject.transform.SetParent(collision.gameObject.transform);
             //collision.gameObject.transform.position= new Vector3(collision.gameObject.transform.position.x,collision.gameObject.transform.position.y,collision.gameObject.transform.position.z);

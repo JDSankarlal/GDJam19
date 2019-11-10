@@ -7,6 +7,8 @@ public class Timer : MonoBehaviour
 {
     public Image bar;
     public float shotClockTime;
+
+    public Gift gift;
     //private float shotClock;
 
     // Start is called before the first frame update
@@ -26,6 +28,11 @@ public class Timer : MonoBehaviour
 
         //Debug.Log(bar.fillAmount);
         //Debug.Log(shotClock);
+        if (gift.resetTimer)
+        {
+            bar.fillAmount = 1;
+            gift.resetTimer = false;
+        }
 
         if (bar.fillAmount <= 0.0f)
         {
