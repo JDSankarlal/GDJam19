@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
 
         if (bar.fillAmount <= 0.0f)
         {
-            Debug.Log("Game Over");
+            //Debug.Log("Game Over");
         }
     }
 

@@ -24,6 +24,12 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (GameObject.Find("Cube").transform.position.y < 0.5800052f)
+        {
+            GameObject.Find("Cube").transform.position =  new Vector3(0.0f, 0.5800052f, 0.0f);
+        }
+
         if (this.gameObject.name == "Player1")
         {
             if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
