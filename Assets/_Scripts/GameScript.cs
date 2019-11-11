@@ -14,11 +14,6 @@ public class GameScript : MonoBehaviour
           
           Gift.transform.SetParent(players[Random.Range(0,3)].transform);
           Gift.transform.position = Gift.transform.parent.position;
-
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
     }
 
     // Update is called once per frame
