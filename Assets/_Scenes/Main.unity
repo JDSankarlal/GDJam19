@@ -16077,7 +16077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1042888068}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 1715227138}
   shotClockTime: 15
   gift: {fileID: 1736958090}
 --- !u!4 &1867717431
