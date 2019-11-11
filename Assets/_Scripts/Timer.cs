@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Image bar;
+    public Image gameOver;
     public float shotClockTime;
     //private float shotClock;
     public Gift gift;
@@ -14,6 +15,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         bar.GetComponent<Image>();
+        gameOver.GetComponent<Image>();
         //shotClock = shotClockTime;
         gift.GetComponent<Gift>();
     }
@@ -37,6 +39,7 @@ public class Timer : MonoBehaviour
 
         if (bar.fillAmount <= 0.0f)
         {
+            gameOver.enabled = true;
             //Debug.Log("Game Over");
         }
     }
