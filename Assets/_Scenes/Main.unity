@@ -15299,8 +15299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  acceleration: 10
-  MaxSpeed: 25
+  acceleration: 80
+  MaxSpeed: 35
 --- !u!1001 &1286630884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15420,8 +15420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  acceleration: 10
-  MaxSpeed: 25
+  acceleration: 80
+  MaxSpeed: 35
 --- !u!143 &1373606128
 CharacterController:
   m_ObjectHideFlags: 0
@@ -16113,8 +16113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  acceleration: 10
-  MaxSpeed: 25
+  acceleration: 80
+  MaxSpeed: 35
 --- !u!143 &1871374669
 CharacterController:
   m_ObjectHideFlags: 0
@@ -21131,8 +21131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  acceleration: 10
-  MaxSpeed: 25
+  acceleration: 80
+  MaxSpeed: 35
 --- !u!1001 &2125710910
 PrefabInstance:
   m_ObjectHideFlags: 0
